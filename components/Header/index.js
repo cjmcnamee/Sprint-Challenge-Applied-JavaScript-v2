@@ -15,9 +15,9 @@ function Header() {
   const title = document.createElement('h1');
   const tempSpan = document.createElement('span');
 
-  divHeader.appendChild(dateSpan)
-  divHeader.appendChild(title)
-  divHeader.appendChild(tempSpan)
+  divHeader.appendChild(dateSpan);
+  divHeader.appendChild(title);
+  divHeader.appendChild(tempSpan);
 
   divHeader.classList.add('header')
   dateSpan.classList.add('date')
@@ -27,6 +27,8 @@ function Header() {
   title.innerHTML = "Lambda Times";
   tempSpan.innerHTML = "98°";
 
-  let head = document.querySelector('.headerContainer')
+  let head = document.querySelector('.header-container')
   head.appendChild(divHeader);
 }
+
+Header();
