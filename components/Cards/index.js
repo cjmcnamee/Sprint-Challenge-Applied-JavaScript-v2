@@ -20,7 +20,10 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
   .then(response => {
-    articleOfFun(response.data);
+    const cardcard = response.data.articles.javascript;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
   })
   .catch(err => {
     console.log(err);
@@ -48,7 +51,7 @@ function articleOfFun(Obj) {
   divHeadline.innerHTML = Obj.headline;
   imgAuthor.src = Obj.authorPhoto;
   spanName.innerHTML = Obj.authorName;
-  
-  console.log(divCard);
 
+  const articles = document.querySelector('.cards-container');
+  articles.appendChild(divCard);
 }
