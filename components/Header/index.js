@@ -23,10 +23,10 @@ function Header() {
   dateSpan.classList.add('date')
   tempSpan.classList.add('temp')
 
-  dateSpan.innerHTML = "SMARCH 28, 2018"
-  title.innerHTML = "Lambda Times"
-  tempSpan.innerHTML = 98°
+  dateSpan.innerHTML = "SMARCH 28, 2018";
+  title.innerHTML = "Lambda Times";
+  tempSpan.innerHTML = "98°";
 
-  let head = document.querySelector(.headerContainer)
+  let head = document.querySelector('.headerContainer')
   head.appendChild(divHeader);
 }
