@@ -26,6 +26,8 @@ function tabTab (tabs) {
 
   divTab.innerHTML = tabs;
 
-  const tab = document.querySelector(".topics");
   tab.appendChild(divTab);
 }
+
+const tab = document.querySelector(".topics");
+console.log(tab);
