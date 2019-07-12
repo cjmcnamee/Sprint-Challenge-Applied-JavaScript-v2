@@ -28,6 +28,50 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
   .catch(err => {
     console.log(err);
   });
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    const cardcard = response.data.articles.bootstrap;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    const cardcard = response.data.articles.technology;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    const cardcard = response.data.articles.jquery;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    const cardcard = response.data.articles.node;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
 //
 function articleOfFun(Obj) {
   const divCard = document.createElement('div');
