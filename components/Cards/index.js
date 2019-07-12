@@ -17,3 +17,85 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    const cardcard = response.data.articles.javascript;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    const cardcard = response.data.articles.bootstrap;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    const cardcard = response.data.articles.technology;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    const cardcard = response.data.articles.jquery;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    const cardcard = response.data.articles.node;
+    cardcard.forEach(item => {
+      articleOfFun(item);
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+//
+function articleOfFun(Obj) {
+  const divCard = document.createElement('div');
+  const divHeadline = document.createElement('div')
+  const divAuthor = document.createElement('div');
+  const divImg = document.createElement('div');
+  const imgAuthor = document.createElement('img');
+  const spanName = document.createElement('span');
+
+  divCard.appendChild(divHeadline);
+  divCard.appendChild(divAuthor);
+  divAuthor.appendChild(divImg);
+  divImg.appendChild(imgAuthor);
+  divAuthor.appendChild(spanName);
+
+  divCard.classList.add('card');
+  divHeadline.classList.add('headline');
+  divAuthor.classList.add('author');
+  divImg.classList.add('img-container');
+
+  divHeadline.innerHTML = Obj.headline;
+  imgAuthor.src = Obj.authorPhoto;
+  spanName.innerHTML = Obj.authorName;
+
+  const articles = document.querySelector('.cards-container');
+  articles.appendChild(divCard);
+}
